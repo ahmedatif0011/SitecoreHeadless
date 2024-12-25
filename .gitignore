@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/src/Frontend/angular/.angular/cache/17.3.11/angular-webpack/0e3d870eeaa67a9ca6b7c0353ca7062b3b4e4389
+/src/Frontend/angular/.angular/cache/17.3.11/babel-webpack
+/.gitignore
+/.gitignore

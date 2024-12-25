@@ -13,6 +13,7 @@
 
             public const string ChildrenOfAnItem = $"{Prefix}Children";
             public const string RetrieveAnItem = $"{Prefix}RetrieveAnItem";
+            public const string EditAnItem = $"{Prefix}EditAnItem";
         }
     }
 }

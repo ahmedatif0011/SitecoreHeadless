@@ -12,5 +12,6 @@ namespace SitecoreHeadless.Helper.Services.API
         public static string RetrieveTheChildrenOfAnItem(string itemId) => $"/sitecore/api/ssc/item/{itemId}/children";
         public static string RetrieveAnItem = $"/sitecore/api/ssc/item";
         public static string RetrieveAnItemWithId(Guid itemId) => $"{RetrieveAnItem}/{itemId.ToString()}";
+        public static string EditAnItem(string itemId) => $"sitecore/api/ssc/item/{itemId}";
     }
 }

@@ -9,7 +9,7 @@ using static SitecoreHeadless.Data.Models.SitecoreModels.SitecoreItemsServices;
 
 namespace SitecoreHeadless.Core.Features.SitecoreItemsServices.Models
 {
-    public class RetrieveAnItemRequest : RetrieveAnItem,IRequest<Response<string>>
+    public class RetrieveAnItemRequest : RetrieveAnItem,IRequest<Response<object>>
     {
     }
 }

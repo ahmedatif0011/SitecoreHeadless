@@ -12,7 +12,13 @@ namespace SitecoreHeadless.Helper.Services.API
         {
             Failed,
             Success,
-            Unauthorized
+            Unauthorized,
+            NoContent,
+            TooManyRequests,
+            Created,
+            Accepted,
+            NotFound,
+            InternalServerError
         }
     }
 }

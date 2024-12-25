@@ -1,4 +1,6 @@
-﻿namespace SitecoreHeadless.Data.Models
+﻿using Microsoft.Extensions.Options;
+
+namespace SitecoreHeadless.Data.Models
 {
     public class APIModel
     {
@@ -9,6 +11,5 @@
         public (string key, string value)[] Headers { get; set; }
         public string? Body { get; set; }
         public bool isLogin { get; set; } = false;
-
     }
 }

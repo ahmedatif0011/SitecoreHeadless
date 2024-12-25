@@ -43,6 +43,7 @@
         public const string InvalidRole = "InvalidRole";
         public const string StudentAlreadyInDepartment = "StudentAlreadyInDepartment";
         public const string InstructorIsAlreadyManager = "InstructorIsAlreadyManager";
+        public const string TooManyRequests = "TooManyRequests";
 
     }
 }

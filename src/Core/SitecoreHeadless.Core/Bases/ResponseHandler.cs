@@ -23,7 +23,8 @@ namespace SitecoreHeadless.Core.Bases
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Succeeded = true,
                 Data = entity,
-                Meta = meta
+                Meta = meta,
+                
             };
         }
         public Response<T> Unauthorized<T>(T? entity,string  message)
@@ -44,13 +45,13 @@ namespace SitecoreHeadless.Core.Bases
                 Message = message
             };
         }
-        public Response<T> NotFound<T>(T entity,string message)
+        public Response<T> NotFound<T>(T entity,string message = null)
         {
             return new Response<T>
             {
                 StatusCode = System.Net.HttpStatusCode.NotFound,
                 Succeeded = false,
-                Message = message.ToString()
+                Message = message
             };
         }
         public Response<T> Created<T>(T entity, object Meta = null, string Message = null)
@@ -76,12 +77,29 @@ namespace SitecoreHeadless.Core.Bases
 
         public Response<T> Build<T>(T data,Response response)
         {
-            if (response == Response.Success)
-                return Success(data);
-            if (response == Response.Unauthorized)
-                return Unauthorized(data,SharedResourcesKeys.UnAuthorized);
-            if (response == Response.Failed)
-                return UnProcessableEntity(data,SharedResourcesKeys.Failed);
+            switch (response)
+            {
+                case Response.Failed:
+                    return UnProcessableEntity(data, SharedResourcesKeys.UnProcessableEntity);
+                case Response.Success:
+                    return Success(data);
+                case Response.Unauthorized:
+                    return Unauthorized(data, SharedResourcesKeys.UnAuthorized);
+                case Response.NoContent:
+                    return Success(data);
+                case Response.TooManyRequests:
+                    return UnProcessableEntity(data,SharedResourcesKeys.TooManyRequests);
+                case Response.Created:
+                    return Success(data);
+                case Response.Accepted:
+                    return Success(data);
+                case Response.NotFound:
+                    return NotFound(data);
+                case Response.InternalServerError:
+                    return UnProcessableEntity(data, SharedResourcesKeys.UnProcessableEntity);
+                default:
+                    break;
+            }
             return NotFound(data,SharedResourcesKeys.NotFound);
         }
     }

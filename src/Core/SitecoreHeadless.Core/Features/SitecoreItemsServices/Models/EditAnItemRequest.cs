@@ -4,7 +4,7 @@ using static SitecoreHeadless.Data.Models.SitecoreModels.SitecoreItemsServices;
 
 namespace SitecoreHeadless.Core.Features.SitecoreItemsServices.Models
 {
-    public class RetrieveTheChildrenOfAnItemRequest : RetrieveTheChildrenOfAnItem, IRequest<Response<object>>
+    public class EditAnItemRequest : EditAnItemAsync,IRequest<Response<object>>
     {
     }
 }
