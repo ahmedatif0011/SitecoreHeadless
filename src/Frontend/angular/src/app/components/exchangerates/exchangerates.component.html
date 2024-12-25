@@ -1,0 +1,40 @@
+<div class="generic-header">
+  <h1>{{ fields.title.value }}</h1>
+</div>
+<div class="generic-details-title">
+  <p>{{ fields.lastupdateddate.value }}</p>
+</div>
+<div>
+  <h4>{{ fields.quotes.value }}</h4>
+</div>
+<div class="table-responsive mutual-funds-prices exchange-rates">
+  <table>
+    <thead>
+      <tr class="first-row">
+        <td rowSpan="2">{{ "Currency" | translate }}</td>
+        <td colSpan="2">{{ "Notes" | translate }}</td>
+        <td colSpan="2">{{ "Transfer" | translate }}</td>
+      </tr>
+      <tr class="second-row">
+        <td class="border-width">{{ "Buy" | translate }}</td>
+        <td>{{ "Sell" | translate }}</td>
+        <td class="border-width">{{ "Buy" | translate }}</td>
+        <td>{{ "Sell" | translate }}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let currency of currenciesInfo">
+        <td>
+          <div>
+            <img [src]="urlBase + currency.flag" />
+          </div>
+          <div>{{ currency.name }}</div>
+        </td>
+        <td>{{ currency.NotesBuyRate }}</td>
+        <td>{{ currency.NotesSellRate }}</td>
+        <td>{{ currency.transfereBuyRate }}</td>
+        <td>{{ currency.TransfereSellRate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

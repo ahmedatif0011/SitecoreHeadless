@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="8.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Abstracts\Functions\" />
+    <Folder Include="Abstracts\Procedures\" />
+    <Folder Include="Abstracts\Views\" />
+    <Folder Include="Persistence\Configurations\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\Functions\" />
+    <Folder Include="Repositories\Procedures\" />
+    <Folder Include="Repositories\Views\" />
+    <Folder Include="Seeder\" />
+    <Folder Include="Specifications\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\SitecoreHeadless.Data\SitecoreHeadless.Data.csproj" />
+    <ProjectReference Include="..\SitecoreHeadless.Helper\SitecoreHeadless.Helper.csproj" />
+  </ItemGroup>
+
+</Project>

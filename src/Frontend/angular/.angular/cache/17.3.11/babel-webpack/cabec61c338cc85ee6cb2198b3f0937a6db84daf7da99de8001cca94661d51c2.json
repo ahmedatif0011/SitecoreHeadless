@@ -1,0 +1,1 @@
+{"ast":null,"code":"// populates missing values\nmodule.exports = function (dst, src) {\n  Object.keys(src).forEach(function (prop) {\n    dst[prop] = dst[prop] || src[prop];\n  });\n  return dst;\n};","map":null,"metadata":{},"sourceType":"script","externalDependencies":[]}

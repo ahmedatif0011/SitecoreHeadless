@@ -1,0 +1,114 @@
+.generic-header{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 45px;
+}
+.generic-header h1 {
+    font-size: calc(14px +(34 - 14)*((100vw - 768px) /(1920 - 768)));
+    font-family: CR;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #871e35;
+    line-height: 27px;
+    margin-bottom: 0;
+}
+.generic-details-title {
+    color: #871e35;
+    font-size: calc(14px +(34 - 14)*((100vw - 768px) /(1920 - 768))) !important;
+    font-weight: 700;
+    margin-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+.mutual-funds-prices .generic-details-title p {
+    margin-bottom: 0;
+}
+.table-responsive {
+    overflow-y: hidden;
+}
+.table-responsive table {
+    width: 100%;
+    font-size: calc(12px +(24 - 12)*((100vw - 768px) /(1920 - 768)));
+    border: 0;
+}
+.table-responsive table thead {
+    color: #fff !important;
+    background-color: #871e35;
+}
+.exchange-rates thead .first-row {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+}
+.mutual-funds-prices thead tr td:last-child {
+    border-width: 0;
+}
+.table-responsive table thead tr td {
+    text-align: center;
+    padding: 27px 50px;
+    position: relative;
+    line-height: 1.2;
+}
+.table-responsive thead td{
+    gap: 6px;
+}
+
+.exchange-rates thead .second-row {
+    background-color: #a13d3c;
+}
+.exchange-rates thead tr .border-width {
+    border-right: 0;
+    position: relative;
+}
+.mutual-funds-prices thead tr td {
+    border: solid #fff;
+    border-width: 0px;
+    border-right-width: 4px;
+}
+
+.table-responsive table tbody tr td {
+    text-align: left;
+    padding: 27px 50px;
+    border: solid #fff;
+    border-width: 0;
+    border-right-width: 10px;
+    line-height: 1.2;
+}
+
+.mutual-funds-prices thead tr td {
+    border: solid #fff;
+    border-width: 0px;
+    border-right-width: 2px;
+}
+.exchange-rates thead tr td {
+    padding: 15px 50px !important;
+}
+
+.exchange-rates tbody tr td {
+    text-align: center !important;
+    padding: 10px 50px !important;
+}
+.table-responsive table tbody tr td {
+    text-align: left;
+    padding: 27px 50px;
+    border: solid #fff;
+    border-width: 0;
+    border-right-width: 10px;
+    line-height: 1.2;
+}
+.generic-details-body {
+    font-size: calc(12px +(24 - 12)*((100vw - 768px) /(1920 - 768)));
+    margin-bottom: 60px;
+}
+exchange-rates tbody tr td .img-flag, .exchange-rates tbody tr td .img-placeholder {
+    height: 40px;
+    max-width: 70px;
+    margin-bottom: 10px;
+}
+.table-responsive table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}

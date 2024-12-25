@@ -1,0 +1,9 @@
+{
+  "sitecore": {
+    "instancePath": "C:\\Websites\\sc1040.sc",
+    "apiKey": "{5AB9F5F7-0B56-416E-9A3E-9A79437D4CEC}",
+    "deploySecret": "evv12wx2vkq77pysu81b8c0lg1mdrnxwx1tyzh880rcj",
+    "deployUrl": "https://sc1040.sc/sitecore/api/jss/import",
+    "layoutServiceHost": "https://sc1040.sc/"
+  }
+}

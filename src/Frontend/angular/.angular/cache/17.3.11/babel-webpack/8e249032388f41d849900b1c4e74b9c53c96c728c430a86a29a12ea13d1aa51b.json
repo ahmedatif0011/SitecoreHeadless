@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Determines whether the current execution context is server-side\n * @returns true if executing server-side\n */\nfunction isServer() {\n  return !(typeof window !== 'undefined' && window.document);\n}\nexport default isServer;","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

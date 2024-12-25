@@ -1,0 +1,1 @@
+{"ast":null,"code":"// © Sitecore Corporation A/S. All rights reserved. Sitecore® is a registered trademark of Sitecore Corporation A/S.\n/* eslint-disable @typescript-eslint/naming-convention */\nexport const CORE_NAMESPACE = 'sitecore-cloudsdk:core';","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
