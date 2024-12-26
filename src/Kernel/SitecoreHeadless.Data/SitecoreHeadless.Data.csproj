@@ -17,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SolrNet.Core" Version="1.1.2" />
   </ItemGroup>
 
 </Project>

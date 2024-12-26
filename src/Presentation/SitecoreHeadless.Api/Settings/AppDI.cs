@@ -29,10 +29,10 @@ namespace SitecoreHeadless.Api.Settings
             });
 
             #region Serilog
-            Log.Logger = new LoggerConfiguration()
-              .ReadFrom.Configuration(builder.Configuration)
-              .WriteTo.Console()
-              .CreateLogger();
+            //Log.Logger = new LoggerConfiguration()
+            //  .ReadFrom.Configuration(builder.Configuration)
+            //  .WriteTo.Console()
+            //  .CreateLogger();
             builder.Services.AddSerilog();
             #endregion
 

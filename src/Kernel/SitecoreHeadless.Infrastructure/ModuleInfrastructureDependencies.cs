@@ -33,7 +33,7 @@ namespace SitecoreHeadless.Infrastructure
             services.AddTransient<HttpClient>();
             services.AddScoped<IAPIService, APIService>();
             services.Configure<SitecoreConfig>(configuration.GetSection("Sitecore"));
-
+            services.AddScoped<IMySolrRepository, MySolrRepository>();
             return services;
         }
     }
