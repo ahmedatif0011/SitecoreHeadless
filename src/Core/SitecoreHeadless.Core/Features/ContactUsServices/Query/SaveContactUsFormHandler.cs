@@ -24,13 +24,13 @@ namespace SitecoreHeadless.Core.Features.ContactUsServices.Query
 
         public async Task<bool> Handle(SaveContactUsFormCommand request, CancellationToken cancellationToken)
         {
-            if (string.IsNullOrWhiteSpace(request.CaptchaResponse))
-                throw new ValidationException("Captcha response is required.");
+            //if (string.IsNullOrWhiteSpace(request.CaptchaResponse))
+            //    throw new ValidationException("Captcha response is required.");
 
-            if (!await _recaptchaService.VerifyCaptchaAsync(request.CaptchaResponse))
-                throw new ValidationException("Invalid captcha.");
+            //if (!await _recaptchaService.VerifyCaptchaAsync(request.CaptchaResponse))
+            //    throw new ValidationException("Invalid captcha.");
 
-            await _contactUsService.SaveFormDataAsync(request.FormData);
+            await _contactUsService.SaveFormDataAsync(request.FormData,request.ClientIp);
             return true;
         }
     }

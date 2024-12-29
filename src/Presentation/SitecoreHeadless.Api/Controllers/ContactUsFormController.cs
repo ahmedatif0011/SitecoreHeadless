@@ -13,34 +13,36 @@ namespace SitecoreHeadless.Api.Controllers
     [ApiController]
     public class ContactUsFormController : ControllerBase
     {
-    //    private readonly IMediator _mediator;
-    //    public ContactUsFormController(IMediator mediator)
-    //    {
-    //        _mediator = mediator;
-    //    }
-    //    [HttpPost("SaveFormDataAsync")]
-    //    public async Task<IActionResult> SaveFormDataAsync([FromForm] ContactUsFormData formData)
-    //    {
-    //        try
-    //        {
-    //            var form = new ContactUsFormData(
-    //                formData.Name, formData.Phone, formData.Email, formData.NationalId, formData.Age,
-    //                formData.Gender, formData.Country, formData.Occupation, formData.MessageType,
-    //                formData.Subject, formData.SuggestionSummary, formData.Attachment);
+        private readonly IMediator _mediator;
+        public ContactUsFormController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+        [HttpPost("SaveFormDataAsync")]
+        public async Task<IActionResult> SaveFormDataAsync([FromForm] ContactUsFormData formData)
+        {
+            try
+            {
+                var form = new ContactUsFormData(
+                    formData.Name, formData.Phone, formData.Email, formData.NationalId, formData.Age,
+                    formData.Gender, formData.Country, formData.Occupation, formData.MessageType,
+                    formData.Subject, formData.SuggestionSummary, formData.Attachment);
 
-    //            var command = new SaveContactUsFormCommand(form, formData.CaptchaResponse);
-    //            await _mediator.Send(command);
+                string clientIP = HttpContext.Connection.RemoteIpAddress?.ToString();
 
-    //            return Ok(new { message = "Form data saved successfully." });
-    //        }
-    //        catch (ValidationException ex)
-    //        {
-    //            return BadRequest(new { message = ex.Message });
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            return StatusCode(500, new { message = $"Internal server error: {ex.Message}" });
-    //        }
-    //    }
-      }
+                var command = new SaveContactUsFormCommand(form, formData.CaptchaResponse,clientIP);
+                await _mediator.Send(command);
+
+                return Ok(new { message = "Form data saved successfully." });
+            }
+            catch (ValidationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = $"Internal server error: {ex.Message}" });
+            }
+        }
+    }
 }

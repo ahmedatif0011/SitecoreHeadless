@@ -12,6 +12,7 @@ namespace SitecoreHeadless.SitecoreHelper
         {
             services.AddTransient<ISitecoreItemService, SitecoreItemService>();
             services.AddScoped<IContactUsService, ContactUsService>();
+            services.AddScoped< IEmailService ,EmailService>();
 
             return services;
         }

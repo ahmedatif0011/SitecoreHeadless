@@ -4,5 +4,5 @@ namespace SitecoreHeadless.SitecoreHelper.Abstracts.ContactUsForm;
 
 public interface IContactUsService
 {
-    Task SaveFormDataAsync(ContactUsFormData formData);
+    Task SaveFormDataAsync(ContactUsFormData formData,string clientIp);
 }

@@ -17,6 +17,8 @@ public class ContactUsFormData
     public IFormFile? Attachment { get; set; } // Path or base64 encoded file string
     public string SuggestionSummary { get; set; }
     public string CaptchaResponse { get; set; } // Add the CaptchaResponse property here
+                                                // Parameterless constructor
+    public ContactUsFormData() { }
     public ContactUsFormData(string name, string phone, string email, string nationalId, string age, string gender,
                          string country, string occupation, string messageType, string subject,
                          string suggestionSummary, IFormFile? attachment)
