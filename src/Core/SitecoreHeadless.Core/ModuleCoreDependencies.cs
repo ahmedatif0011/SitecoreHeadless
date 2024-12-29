@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SitecoreHeadless.Core.Bahaviors;
+using SitecoreHeadless.Helper.Services;
 using System.Reflection;
 
 namespace SitecoreHeadless.Data

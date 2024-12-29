@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using SitecoreHeadless.Data.AppMetaData;
 using SitecoreHeadless.Data.Models;
+using SitecoreHeadless.Helper.Services;
 
 namespace SitecoreHeadless.Infrastructure
 {
@@ -10,6 +11,7 @@ namespace SitecoreHeadless.Infrastructure
     {
         public static IServiceCollection AddServiceRegistration(this IServiceCollection services)
         {
+           services.AddScoped<RecaptchaService>();
             //Swagger Gn
             services.AddSwaggerGen(c =>
             {

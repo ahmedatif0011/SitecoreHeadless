@@ -1,3 +1,4 @@
+using MediatR;
 using SitecoreHeadless.Api.Settings;
 
 namespace SitecoreHeadless.Api
